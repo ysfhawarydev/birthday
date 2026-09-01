@@ -1,0 +1,2 @@
+import { motion } from 'framer-motion';
+export function Decor(){return <div className="decor" aria-hidden="true">{Array.from({length:18},(_,i)=><motion.span key={i} className="float-heart" initial={{y:'110vh',x:`${(i*37)%100}vw`,opacity:0,scale:.4}} animate={{y:'-15vh',opacity:[0,.8,.8,0],x:[`${(i*37)%100}vw`,`${((i*37+12)%100)}vw`],rotate:[0,18,-12,20]}} transition={{duration:10+i%6,repeat:Infinity,delay:i*.55,ease:'linear'}}>{i%3===0?'♡':i%3===1?'✦':'♥'}</motion.span>)}</div>}
